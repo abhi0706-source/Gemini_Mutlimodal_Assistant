@@ -1,5 +1,5 @@
 
-# ✨ **Gemini Multimodal RAG Assistant** 🌟
+# ✨ **Gemini Multimodal Assistant** 🌟
 
 The **Gemini Multimodal RAG Assistant** is a cutting-edge 🛠️ Retrieval-Augmented Generation (RAG) system 🚀 powered by Gemini AI models 🤖. It offers modular agents, task orchestration, and advanced tools to deliver accurate ✅, context-aware 🧠, and structured 📊 responses to user queries. Supporting diverse functionalities 🌈 like document processing 📂, web-based content retrieval 🌐, and AI-driven query resolution 🤓, the assistant includes options for **web search answers** 🔍 and **LLM-based answers** 💡, making it a versatile solution for all information needs 📚.
 
