@@ -161,17 +161,32 @@ def get_response(request: QueryRequest):
         cleaned_text = "".join(
             char for char in response if ord(char) >= 32 or char in "\n\r\t"
         )
-        result = json.loads(cleaned_text)
-        print(result)
 
-        result = {
-            "response": result["Answer"],
-            "context": result["context"],
-            "citations": result["citations"],
-        }
+        result = dict(json.loads(cleaned_text))
         # print(result)
+        result_answer = {
+            "response": "",
+            "context": "",
+            "citations": "",
+        }
+        print("***************************")
+        if "Answer" in result.keys():
+            result_answer = {
+                "response": result["Answer"],
+                "context": result["context"],
+                "citations": result["citations"],
+            }
+        elif "answer" in result.keys():
 
-        return result
+            result_answer = {
+                "response": result["answer"],
+                "context": result["context"],
+                "citations": result["citations"],
+            }
+        print("***************************")
+        print(result_answer)
+
+        return result_answer
 
     except ValidationError as e:
         raise HTTPException(status_code=422, detail=f"Validation Error: {e}")

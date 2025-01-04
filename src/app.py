@@ -271,6 +271,7 @@ def call_rag_api(query: str, url: str, is_uploaded: bool = False) -> Dict:
         response = requests.post(endpoint, json=payload)
         response.raise_for_status()
         result = response.json()
+        print(result)
         return {
             "status": "success",
             "response": result["response"],
